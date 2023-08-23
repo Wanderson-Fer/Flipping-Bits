@@ -4,6 +4,7 @@ def convert_to_bits(n):
     for e in range(31, -1, -1):
         if n - 2 ** e >= 0:
             converted_n += '1'
+            n -= 2**e
         else:
             converted_n += '0'
 
@@ -36,4 +37,5 @@ def flipping_bits(n):
 
 
 if __name__ == '__main__':
-    print('hi')
+    print(f'15 in bits (32) is: {convert_to_bits(15)}')
+    print(f'15 flipped like 32bits is: {flipping_bits(15)}')
